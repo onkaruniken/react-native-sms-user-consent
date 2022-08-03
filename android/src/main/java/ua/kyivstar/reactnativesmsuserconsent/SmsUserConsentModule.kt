@@ -35,7 +35,7 @@ class SmsUserConsentModule(reactContext: ReactApplicationContext) : ReactContext
     }
     this.promise = promise
     if (reactContext?.currentActivity != null) {
-      val task: Task<Void> = SmsRetriever.getClient(reactContext.currentActivity!!).startSmsUserConsent(null)
+      val task: Task<Void> = SmsRetriever.getClient(reactContext.currentActivity!!).startSmsUserConsent("+917977509232")
 
       task.addOnSuccessListener { // successfully started an SMS Retriever for one SMS message
         registerReceiver()
