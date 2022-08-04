@@ -29,7 +29,7 @@ class SmsUserConsentModule(reactContext: ReactApplicationContext) : ReactContext
   }
 
   @ReactMethod
-  fun listenOTP(promise: Promise, senderId: String) {
+  fun listenOTP(senderId: String, promise: Promise) {
     if (this.promise != null) {
       promise.reject(E_OTP_ERROR, Error("Reject previous request"))
     }
