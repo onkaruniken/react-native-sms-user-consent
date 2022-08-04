@@ -29,13 +29,13 @@ class SmsUserConsentModule(reactContext: ReactApplicationContext) : ReactContext
   }
 
   @ReactMethod
-  fun listenOTP(promise: Promise) {
+  fun listenOTP(promise: Promise, senderId: String) {
     if (this.promise != null) {
       promise.reject(E_OTP_ERROR, Error("Reject previous request"))
     }
     this.promise = promise
     if (reactContext?.currentActivity != null) {
-      val task: Task<Void> = SmsRetriever.getClient(reactContext.currentActivity!!).startSmsUserConsent("+919021977404")
+      val task: Task<Void> = SmsRetriever.getClient(reactContext.currentActivity!!).startSmsUserConsent(senderId)
 
       task.addOnSuccessListener { // successfully started an SMS Retriever for one SMS message
         registerReceiver()
