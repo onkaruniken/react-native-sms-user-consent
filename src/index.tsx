@@ -5,18 +5,18 @@ export interface SmsResponse {
 }
 
 type SmsUserConsentType = {
-  listenOTP(): Promise<SmsResponse>;
+  listenOTP(senderId): Promise<SmsResponse>;
   removeOTPListener(): Promise<void>;
 };
 
 const { SmsUserConsent: SmsUserConsentModule } = NativeModules;
 
 class SmsUserConsent {
-  static listenOTP() {
+  static listenOTP(senderId) {
     if (Platform.OS !== 'android') {
       return 'false';
     }
-    return SmsUserConsentModule.listenOTP();
+    return SmsUserConsentModule.listenOTP(senderId);
   }
   static removeOTPListener() {
     if (Platform.OS !== 'android') {
