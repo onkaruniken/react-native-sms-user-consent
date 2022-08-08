@@ -12,7 +12,7 @@ type SmsUserConsentType = {
 const { SmsUserConsent: SmsUserConsentModule } = NativeModules;
 
 class SmsUserConsent {
-  static listenOTP(senderId) {
+  static listenOTP(senderId: string) {
     if (Platform.OS !== 'android') {
       return 'false';
     }
