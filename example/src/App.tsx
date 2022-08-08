@@ -6,7 +6,7 @@ export default function App() {
   const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    SmsUserConsent.listenOTP().then((res) => setResult(res.receivedOtpMessage));
+    SmsUserConsent.listenOTP("<addSenderId>").then((res) => setResult(res.receivedOtpMessage));
   }, []);
 
   return (
