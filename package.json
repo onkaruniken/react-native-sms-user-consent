@@ -103,8 +103,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@types/keyv": "^4.2.0"
   }
 }
