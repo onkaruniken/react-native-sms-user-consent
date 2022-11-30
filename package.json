@@ -40,7 +40,7 @@
   "homepage": "https://github.com/kyivstarteam/react-native-sms-user-consent#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
-    "react-native-builder-bob": "^0.20.1",
+    "@callstack/react-native-builder-bob": "^0.20.1",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^1.1.4",
     "@types/jest": "^26.0.0",
@@ -96,7 +96,7 @@
     "trailingComma": "es5",
     "useTabs": false
   },
-  "react-native-builder-bob": {
+  "@callstack/react-native-builder-bob": {
   "source": "src",
   "output": "lib",
   "targets": [
