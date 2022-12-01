@@ -107,7 +107,7 @@
     ["aar", {"reverseJetify": true}],
     ["commonjs", {"copyFlow": true}],
     "module",
-    "typescript",
+    "typescript"
     ]
   },
   "publishConfig": {
