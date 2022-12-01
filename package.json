@@ -101,7 +101,7 @@
   "source": "src",
   "output": "lib",
   "targets": [
-    ["aar", {"reverseJetify": true}],
+    ["aar", {"reverseJetify": false}],
     ["commonjs", {"copyFlow": true}],
     "module",
     "typescript"
